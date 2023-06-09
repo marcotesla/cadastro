@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(fundo+.jpeg);
+  background-size: cover;
+  background-position: center top 20%;
+  font-family: "open sans", sans-serif;
+  overflow: hidden;
+}
+
+header {
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.flex {
+  flex: 1 1 1;
+}
+
+.logo {
+  margin: 20px 150px;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.btn {
+  margin-top: 20px;
+  text-align: right;
+  padding: 18px 10px;
+  font-weight: bold;
+  margin: 40px;
+  margin-left: 43%;
+  cursor: pointer;
+}
+
+.btn a {
+  text-decoration: none;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 14px 30px;
+  border-radius: 20px;
+  background: transparent;
+}
+
+.btn a:hover {
+  color: #7e13af;
+  cursor: pointer;
+}
+
+ul {
+  line-height: 60px;
+  margin-top: 20px;
+}
+
+ul li {
+  display: inline;
+  padding: 20px;
+}
+
+#menu a:link,
+a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+#menu a:hover,
+a:active {
+  color: #7e13af;
+}
+
+.top a:link,
+a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+.top a:hover,
+a:active {
+  color: #7e13af;
+}
+
+main {
+  margin-top: 0;
+  max-width: 600px;
+  min-height: 500px;
+  margin-left: 26%;
+}
+
+.container {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  color: white;
+  border-radius: 30px;
+  margin: 40px;
+  padding: 50px;
+}
+
+.top {
+  text-align: right;
+}
+
+.title {
+  text-align: center;
+  justify-content: center;
+  cursor: default;
+  padding: 5px;
+  margin: -10px;
+}
+
+.options {
+  margin: 20px;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+}
+
+ion-icon {
+  font-size: 30px;
+  display: flex;
+}
+
+.bar {
+  margin: 15px 20px;
+  font-family: "open sans", sans-serif;
+}
+
+.bar p {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  cursor: default;
+  text-align: center;
+  justify-content: center;
+}
+
+.bar input {
+  cursor: pointer;
+}
+
+.bar label {
+  cursor: default;
+}
+
+.foot {
+  margin-top: 8%;
+  justify-content: center;
+  text-align: center;
+}
+
+.foot a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 70px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.foot a:hover {
+  color: #7e13af;
+}
+
+/*para sites responsivo no mobile resolução abaixo de 600*/
+@media (max-width: 1000px) {
+  body {
+    overflow: hidden;
+  }
+
+  .logo {
+    margin: 10px 50px;
+  }
+
+  .btn {
+    margin: 30px;
+    margin-left: 14%;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  main {
+    margin-top: -10%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    overflow: hidden;
+  }
+
+  .logo {
+    margin: 10px 50px;
+  }
+
+  .btn {
+    margin: 30px;
+    margin-left: -4%;
+  }
+
+  main {
+    margin: 0;
+    margin-left: none;
+  }
+
+  .container {
+    width: 75.5%;
+    margin: 0;
+  }
+}

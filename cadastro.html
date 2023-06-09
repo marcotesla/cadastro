@@ -1,0 +1,106 @@
+<?php
+
+if (isset($_POST['submit'])) {
+
+    include_once('config.php');
+
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $data_nascimento = $_POST['data_nascimento'];
+    $igreja = $_POST['igreja'];
+    $instagram = $_POST['instagram'];
+    $genero = $_POST['genero'];
+
+    $result = mysqli_query($conexao, "INSERT INTO conju(nome,email,data_nascimento,igreja,instagram,genero) VALUES ('$nome','$email','$data_nascimento','$igreja','$instagram','$genero')");
+
+    header("Location: email.php");
+    exit();
+
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo flex">
+            <img src="img/LOGO CONJU+ BRANCO.png" alt="Teste" class="imagem">
+        </div>
+        <nav class="flex">
+
+        </nav>
+        <div class="btn flex">
+            <a href="https://instagram.com/conjumais?igshid=ZDdkNTZiNTM=">Redes sociais</a>
+        </div>
+    </header>
+
+    <main action="formulario.php" method="POST">
+        <section class="container">
+            <div class="top">
+
+            </div>
+            <div class="title">
+                <h1>Cadastrar</h1>
+            </div>
+            <div class="options">
+                <div class="option">
+                    <form>
+                        <input class="name" type="name" placeholder="Nome Completo" aria-label="name" required>
+                        <ion-icon name="person-outline"></ion-icon>
+                    </form>
+                </div>
+                <div class="option">
+                    <form>
+                        <input class="cpf" type="text" placeholder="Email" aria-label="cpf" required>
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </form>
+                </div>
+                <div class="option">
+                    <form>
+                        <input class="gmail" type="gmail" placeholder="Data de nascimento" aria-label="gmail" required>
+                        <ion-icon name="calendar-outline"></ion-icon>
+                    </form>
+                </div>
+                <div class="option">
+                    <form>
+                        <input class="telefone" type="telephone" placeholder="Igreja" aria-label="telefone" required>
+                        <ion-icon name="home-outline"></ion-icon>
+                    </form>
+                </div>
+                <div class="option">
+                    <form>
+                        <input class="senha" type="password" placeholder="Instagram" aria-label="senha" required>
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </form>
+                </div>
+            </div>
+            <div class="bar">
+                <p>Gênero</p>
+                <input type="radio" id="feminino" name="genero" value="feminino" required>
+                <label for="feminino">Feminino</label>
+                <input type="radio" id="masculino" name="genero" value="masculino" required>
+                <label for="masculino">Masculino</label>
+            </div>
+            <div class="foot">
+                <a href="comprovante.html">Cadastre-se</a>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
